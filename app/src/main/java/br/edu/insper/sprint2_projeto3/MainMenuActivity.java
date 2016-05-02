@@ -20,23 +20,35 @@ public class MainMenuActivity extends AppCompatActivity {
         buttonNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Cria uma Intent para abrir uma StudentFormActivity.
+
                 Intent intent = new Intent(MainMenuActivity.this, MorseActivity.class);
 
-                // Inicia uma nova activity a partir da Intent criada.
+
                 startActivity(intent);
             }
         });
 
-        Button buttonMessage = (Button) findViewById(R.id.sms);
-        assert buttonMessage != null;
-        buttonMessage.setOnClickListener(new View.OnClickListener() {
+        Button buttonNew2 = (Button) findViewById(R.id.helper);
+        assert buttonNew2 != null;
+        buttonNew2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Cria uma Intent para abrir uma StudentFormActivity.
-                Intent intent = new Intent(MainMenuActivity.this, SMSActivity.class);
+                Intent intent = new Intent(MainMenuActivity.this, HelperActivity.class);
 
-                // Inicia uma nova activity a partir da Intent criada.
+
+                startActivity(intent);
+            }
+        });
+
+
+        Button buttonNew3 = (Button) findViewById(R.id.mensagens);
+        assert buttonNew3 != null;
+        buttonNew3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenuActivity.this, MensagensActivity.class);
+
+
                 startActivity(intent);
             }
         });

@@ -9,19 +9,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MorseActivity">
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Digite a mensagem"
         android:id="@+id/textView" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:text="Morse"
         android:id="@+id/buttonmorse"
-        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/buttonmorse"
+        android:layout_centerHorizontal="true"
+        android:textSize="19dp"
+        android:text="Enter = ---.     Espaço = ..--     Apagar = ----"
+        android:layout_marginTop="41dp" />
 
 
 </RelativeLayout>

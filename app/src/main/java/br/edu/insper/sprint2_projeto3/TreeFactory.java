@@ -87,7 +87,7 @@ public class TreeFactory {
 
                 if(node.getLeft() != null) {
                     stack.push(new Crumb(node.getLeft()));
-                    morsecode+="o";
+                    morsecode+=".";
                 }
 
                 top.incrementPasses();
