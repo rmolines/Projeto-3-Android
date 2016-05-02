@@ -4,7 +4,7 @@ package br.edu.insper.sprint2_projeto3;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Main {
+public class TreeFactory {
     private static final int NUM_NODES = 40;
     private String[] arvorebinaria = {"NADA","E","T","I","A","N","M","S","U","R",
             "W","D","K","G","O","H","V","F","NADA","L","P","J","B","X",
@@ -16,7 +16,7 @@ public class Main {
     private ArrayList<ArrayList<String>> morse_simbolo = new ArrayList<>();
 
 
-    public Main() {
+    public TreeFactory() {
         Node[] nodes = new Node[NUM_NODES];
         for(int i = 0; i < NUM_NODES; i++) {
             nodes[i] = new Node(i);

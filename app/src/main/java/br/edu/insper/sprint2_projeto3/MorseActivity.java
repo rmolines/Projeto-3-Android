@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MorseActivity extends AppCompatActivity {
 
 
     private String[] arvorebinaria = {"","E","I","S","H","5","4","V","3","U",
@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
     String letra = "";
     String text = "";
-    Main factory = new Main();
+    TreeFactory factory = new TreeFactory();
     ArrayList<String> morsecode = factory.getMorse();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_morse);
 
         Button buttonmorse_enviar  = (Button) findViewById(R.id.buttonmorse);
         final TextView texto = (TextView) findViewById(R.id.textView);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     letra = "";
                 }
                 catch (ArrayIndexOutOfBoundsException e) {
-                    Toast.makeText(MainActivity.this, "Voce errou o código", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MorseActivity.this, "Voce errou o código", Toast.LENGTH_LONG).show();
                     letra = "";
                 }
             }
