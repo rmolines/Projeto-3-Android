@@ -9,7 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HelperActivity" />
-            <activity android:name=".MorseActivity" />
+        <activity android:name=".MorseActivity" />
+        <activity android:name=".SMSActivity" />
         <activity android:name=".MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

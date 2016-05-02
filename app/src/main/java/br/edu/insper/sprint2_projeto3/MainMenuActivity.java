@@ -28,5 +28,17 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonMessage = (Button) findViewById(R.id.sms);
+        assert buttonMessage != null;
+        buttonMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria uma Intent para abrir uma StudentFormActivity.
+                Intent intent = new Intent(MainMenuActivity.this, SMSActivity.class);
+
+                // Inicia uma nova activity a partir da Intent criada.
+                startActivity(intent);
+            }
+        });
     }
 }
