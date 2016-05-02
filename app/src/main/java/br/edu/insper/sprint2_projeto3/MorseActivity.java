@@ -69,6 +69,7 @@ public class MorseActivity extends AppCompatActivity {
                         if (letra.equals("---.")) {
                             mensagem = text;
                             text = "";
+                            letra = "";
                             texto.setText("Digite o número de celular");
                             celular = true;
                         } else if (letra != null) {
@@ -92,6 +93,15 @@ public class MorseActivity extends AppCompatActivity {
                                 System.out.println("Entrou12");
                                 Toast.makeText(MorseActivity.this, "Número inválido!", Toast.LENGTH_SHORT).show();
                             }
+                        }
+                        if (letra.equals("----")) {
+                            numero = numero.substring(0, numero.length()-1);
+                        }
+                        else if (letra.equals("..--")) {
+                            numero += " ";
+                        }
+                        else {
+                            numero += arvorebinaria[morsecode.indexOf(letra)];
                         }
 
                     }
